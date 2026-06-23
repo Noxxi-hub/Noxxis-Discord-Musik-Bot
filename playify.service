@@ -1,0 +1,23 @@
+[Unit]
+Description=Playify Discord Bot
+After=network.target
+Wants=bgutil-pot.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/playify
+ExecStart=/home/playify/.venv/bin/python /home/playify/start_playify.py
+Restart=on-failure
+RestartSec=10
+TimeoutStopSec=15
+
+# Single instance is enforced by the app via /tmp/playify.lock
+
+# Hardening
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/home/playify/data /home/playify/.cache
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,20 @@
+# Core Discord library and voice dependency
+discord.py
+PyNaCl
+davey
+
+# Audio/Video downloading
+yt-dlp
+
+# Music platform APIs and scrapers
+spotipy
+spotifyscraper[all]
+requests
+syncedlyrics
+lyricsgenius
+playwright
+python-dotenv  # <-- NEW
+
+# Utilities
+cachetools
+psutil
