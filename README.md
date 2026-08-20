@@ -86,7 +86,10 @@ DISCORD_TOKEN=your_discord_bot_token
 SPOTIFY_CLIENT_ID=your_spotify_client_id
 SPOTIFY_CLIENT_SECRET=your_spotify_client_secret
 GENIUS_TOKEN=your_genius_api_token
+BGUTIL_POT_URL=http://127.0.0.1:4416   # optional — YouTube-403-Umgehung (bgutil POT-Dienst)
 ```
+
+> **`BGUTIL_POT_URL`** (optional): Adresse des bgutil-PO-Token-Dienstes, der YouTube-403/BotGuard-Sperren umgeht. Standard `http://127.0.0.1:4416`. Nur setzen, wenn du die POT-Umgehung nutzt.
 
 Then start the bot:
 
@@ -116,7 +119,7 @@ cp .env.example .env
 Edit `.env` with your tokens, then run:
 
 ```bash
-python playify.py
+python start_playify.py
 ```
 
 **On Windows**, you can skip all of this — just double-click **`start.bat`**. It automatically handles Python installation, FFmpeg download, dependency setup, and `.env` configuration through an interactive prompt. No command line knowledge needed.
